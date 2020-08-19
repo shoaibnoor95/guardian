@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    margin-bottom: 5px !important;
+    margin-top: 20px;
+    color: #888;
+}
+
+/* Header Css Start */
+
+.topheader{ background: rgba(66,144,202,0.74); }
+.headwrap{ width: 1400px; margin: 0 auto;  font-family: 'Barlow Condensed', sans-serif; }
+
+.topnbmr{ text-align: right; padding-top: 15px; padding-bottom: 15px; }
+.topnbmr a{ text-decoration: none; color: #fff; font-size: 18px; letter-spacing: 2px; }
+
+.navmain{ background-color: rgba(37,39,51,0.81); }
+.navmain a.navbar-brand{ width: 20%; }
+.navmain a.navbar-brand img { width: 100%; }
+.navmain ul.navbar-nav{}
+.navmain ul.navbar-nav li{ padding-right: 30px; }
+.navmain ul.navbar-nav li a{ text-decoration: none; color: #fff; font-size: 24px; text-transform: uppercase; }
+.navmain ul.navbar-nav li a:hover{ color: #4290ca; }
+.navmain ul.login-area{ padding: 0; margin: 0; }
+.navmain ul.login-area li{ display: inline-block; list-style: none; }
+.navmain ul.login-area li a{ text-decoration: none; text-transform: uppercase; color: #fff; }
+.navmain ul.login-area li:first-child a{background: #fff; color: #252733; padding: 10px 21px; text-transform: uppercase; margin-right: 10px;font-size: 18px; font-weight: 800; }
+.navmain ul.login-area li:last-child a{ background: #4290ca; color: #fff !important; padding: 10px 21px; text-transform: uppercase; font-size: 18px;font-weight: 500;}
+
+.stepholder{ width: 100%; margin: 30px 0; padding: 0 30px;  }
+
+
+.footerbg{border-bottom: 1px solid #2D2B2C !important; background: #242223; padding: 40px 10px 20px; }
+
+.footerlinks{  font-family: "Barlow Condensed"; }
+.footerlinks h2{ margin: 0 0 28px; text-transform: uppercase; font-size: 24px; font-weight: 400; line-height: 1.5; letter-spacing: 0px; font-style: normal; color: #ffffff; }
+.footerlinks ul{ padding: 0; margin: 0; }
+.footerlinks ul li{}
+.footerlinks ul li a{ text-decoration: none; color:#707070; text-transform: capitalize; font-size: 18px; padding: 8px 0; display: block; }
+
+.footerlinks ul li a i { margin-right: 7px; width: 16px; text-align: center;}
+/* Header Css Close */
+
+/*New Form Css*/
+
+/*form styles*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: 0 0 2px #00000073;
+    border: 0 !important;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+
+#msform { position: relative; margin-top: 30px;}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #ee0979;
+    color: white;
+}
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #ee0979;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
+
+/*New Form Css*/
+
+
+/* Customize the label (the container) */
+.labelholder {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+ /* font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;*/
+}
+
+/* Hide the browser's default checkbox */
+.labelholder input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px !important;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.labelholder:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.labelholder input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.labelholder input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.labelholder .checkmark:after {
+    left: 9px;
+    top: 2px;
+    width: 8px;
+    height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*Radio Button CSS*/
+
+
+/* Customize the label (the container) */
+.radioholder {
+  display: block !important;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+/* Hide the browser's default radio button */
+.radioholder input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioholder:hover input ~ .radiomark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioholder input:checked ~ .radiomark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioholder input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioholder .radiomark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+
+.labholder label{ display: inline-block !important; width: auto; margin: 0 10px; }
+
+
+/*form styles*/
+#msform {position: relative; margin-top: 30px; margin-bottom: 50px;}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+    border-bottom: 2px solid rgba(66,144,202,1) !important;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 120px;
+    background: rgba(66,144,202,1);
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    font-size: 16px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(66,144,202,1);
+}
+
+#msform .action-button-previous {
+    width: 120px;
+    background: #333;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    font-size: 16px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+.form-inline .form-control {
+    width: 100%;
+}
+.form-group{ width: 100%; }
+
+.form-control {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: 0 0 2px #00000073;
+    border: 0 !important;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+}
+.form-inline .form-control:focus {
+    color: rgb(73, 80, 87);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(73, 80, 87, 0.11) 0px 0px 0px 0.2rem;
+    width: 100%;
+    border-color: rgb(221, 221, 221);
+    outline: none;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid rgba(66,144,202,1) !important;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    text-align: center;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: rgba(37,39,51,1);
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 11%;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+}
+
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: block;
+    font-size: 27px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 20px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #4290ca;
+    color: white;
+}
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+ 
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #ee0979;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
+
+.label-icon{}
+
+/* Create a custom radio button */
+.label-icon .radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100% !important;
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid #000;
+}
+
+/* On mouse-over, add a grey background color */
+.label-icon .radioholder:hover input ~ .radiomark {
+  border: 2px solid #4290ca;
+  background-color: transparent;
+}
+
+/* When the radio button is checked, add a blue background */
+.label-icon .radioholder input:checked ~ .radiomark {
+  background-color: transparent;
+  border: 2px solid #4290ca;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.label-icon .radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+
+/* Style the indicator (dot/circle) */
+.label-icon .radioholder .radiomark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+.label-icon{ float: left; margin: 0 10px;  text-align: center; }
+.label-icon i{ font-size: 35px; display: block; margin-bottom: 15px; }
+.label-icon label{ margin:0;  padding: 20px 20px;}
+
+.radiocurrent label{ color: #4290ca; background: rgba(37,39,51,1)  }
+.radiocurrent i{ color: #4290ca; }
+
+
+
+
+
+
+.form-group .form-inline label{ justify-content: left !important;  }
