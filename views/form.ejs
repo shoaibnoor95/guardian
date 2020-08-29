@@ -116,7 +116,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <form id="msform" action="https://google.com" method="post">
+              <form id="msform" method="post" action="/form">
                 <!-- progressbar -->
 
                 <!-- fieldsets -->
@@ -136,7 +136,7 @@
                     <div class="form-inline col-sm-4">
                       <label>Middle Name</label>
                       <input
-                        class="form-control"
+                      class="form-control validate"
                         type="text"
                         required="required"
                         name="middleName"
@@ -144,19 +144,26 @@
                     </div>
                     <div class="form-inline col-sm-4">
                       <label>Last Name</label>
-                      <input class="form-control" type="text" name="lastName" />
+                      <input 
+                      class="form-control validate"
+                      required="required" 
+                      type="text" 
+                      name="lastName" />
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="form-inline col-sm-8">
                       <label>Address</label>
-                      <input class="form-control" type="text" name="address" />
+                      <input class="form-control validate"
+                      required="required" 
+                      type="text" 
+                      name="address" />
                     </div>
                     <div class="form-inline col-sm-4">
                       <label>Apt/Suite</label>
                       <input
-                        class="form-control"
+                        class="form-control validate"
                         type="text"
                         required="required"
                         name="streetAddress"
@@ -891,7 +898,7 @@
                         name="city"
                         required="required"
                         value=""
-                        class="form-control"
+                        class="form-control validate"
                       />
                     </div>
 
@@ -899,10 +906,8 @@
                       <label>Zip Code</label>
                       <input
                         type="text"
-                        required="required"
                         name="zipcode"
                         value=""
-                        class="form-control"
                       />
                     </div>
                   </div>
@@ -926,7 +931,8 @@
                         <div class="form-inline col-sm-8">
                           <label>Address</label>
                           <input
-                            class="form-control"
+                          class="form-control validate"
+                          required="required"
                             type="text"
                             name="address"
                           />
@@ -944,7 +950,7 @@
                       <div class="row">
                         <div class="form-inline col-sm-5">
                           <label>Country</label>
-                          <<select
+                          <select
                             name="mailingCountry"
                             required="required"
                             id="country"
@@ -1672,7 +1678,8 @@
                             type="text"
                             name="cities"
                             value=""
-                            class="form-control"
+                            class="form-control validate"
+                            required="required"
                           />
                         </div>
 
@@ -1682,7 +1689,7 @@
                             type="text"
                             name="mailingZipcode"
                             value=""
-                            class="form-control"
+                            class="form-control validate"
                           />
                         </div>
                       </div>
@@ -1742,7 +1749,8 @@
                         value=""
                         id="tele_num"
                         name="tele_num"
-                        class="form-control"
+                        class="form-control validate"
+                          required="required"
                       />
                       <p class="tele_para">
                         Telephone numbers are checked for validity in the
@@ -1782,7 +1790,8 @@
                       <div class="form-inline col-sm-4">
                         <label>Name</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                          required="required"
                           type="text"
                           name="trustedPersonName"
                         />
@@ -1792,7 +1801,8 @@
                       <div class="form-inline col-sm-4">
                         <label>Phone Number</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                          required="required"
                           type="text"
                           name="trustedPersonPhone"
                         />
@@ -1802,7 +1812,8 @@
                       <div class="form-inline col-sm-4">
                         <label>Email Address</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                          required="required"
                           type="text"
                           name="trustedPersonEmail"
                         />
@@ -1814,7 +1825,8 @@
                       <div class="form-inline col-sm-12">
                         <label>Street Address</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                          required="required"
                           type="text"
                           name="trustedPersonStreet"
                         />
@@ -1827,7 +1839,7 @@
                       <div class="form-inline col-md-3">
                         <label>Country</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
                           type="text"
                           name="trustedPersonCountry"
                         />
@@ -1836,7 +1848,7 @@
                       <div class="form-inline col-md-3">
                         <label>State</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
                           type="text"
                           name="trustedPersonState"
                         />
@@ -1845,7 +1857,7 @@
                       <div class="form-inline col-md-3">
                         <label>City</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
                           type="text"
                           name="trustedPersonCity"
                         />
@@ -1854,7 +1866,7 @@
                       <div class="form-inline col-md-3">
                         <label>Zip</label>
                         <input
-                          class="form-control"
+                        class="form-control validate"
                           type="text"
                           name="trustedPersonZip"
                         />
@@ -1974,7 +1986,8 @@
                         >
 
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                        required="required"
                           type="text"
                           name="emp_name"
                         />
@@ -1984,7 +1997,8 @@
                           >Occupation</label
                         >
                         <input
-                          class="form-control"
+                        class="form-control validate"
+                        required="required"
                           type="text"
                           name="occupation"
                         />
@@ -2001,7 +2015,8 @@
                               <input
                                 type="text"
                                 name="addressemploye"
-                                class="form-control"
+                                class="form-control validate"
+                          required="required"
                               />
                             </div>
                             <div class="col-sm-4">
@@ -2010,7 +2025,8 @@
                                 <input
                                   type="text"
                                   name="yearsemploye"
-                                  class="form-control"
+                                  class="form-control validate"
+                          required="required"
                                 />
                               </div>
                             </div>
@@ -2772,10 +2788,10 @@
 
                             <div class="col-sm-4">
                               <div class="form-group">
-                                <label>State/Province</label>
+                                <label>ZipCode</label>
                                 <input
                                   name="employee_zip"
-                                  value="asd"
+                                  value=""
                                   type="text"
                                   class="form-control"
                                   id="employee_zip"
@@ -2794,7 +2810,6 @@
                               <div class="form-group">
                                 <label>City</label>
                                 <input
-                                  class="form-control"
                                   type="text"
                                   name="city"
                                 />
@@ -2816,7 +2831,8 @@
                                   >Employer's Phone Number</label
                                 >
                                 <input
-                                  class="form-control"
+                                class="form-control validate"
+                                required="required"
                                   type="number"
                                   name="employeerphoneNumber"
                                 />
@@ -2889,6 +2905,8 @@
                                     name="date_of_birth"
                                     data-provide="datepicker"
                                     class="form-control date-picker"
+                                    class="form-control validate"
+                                    required="required"
                                     data-date-format="mm-dd-yyyy"
                                   />
                                 </div>
@@ -2897,6 +2915,8 @@
                                   <select
                                     name="id_type"
                                     class="selectpicker form-control"
+                                    class="form-control validate"
+                                    required="required"
                                     onchange="showDiv(this)"
                                   >
                                     <option value="Driver License" selected=""
@@ -2916,7 +2936,8 @@
                                       type="text"
                                       value=""
                                       name="name_of_id"
-                                      class="form-control"
+                                      class="form-control validate"
+                          required="required"
                                     />
                                   </div>
                                 </div>
@@ -2926,7 +2947,8 @@
                                     name="id_number"
                                     value="32"
                                     type="text"
-                                    class="form-control"
+                                    class="form-control validate"
+                          required="required"
                                   />
                                 </div>
                               </div>
@@ -2937,6 +2959,8 @@
                                     name="licenseExp"
                                     value="2020-07-17"
                                     type="date"
+                                    class="form-control validate"
+                          required="required"
                                     data-date-format="dd-mm-yyyy"
                                     class="form-control date-picker"
                                   />
@@ -2947,7 +2971,8 @@
                                     name="place_country"
                                     value=""
                                     type="text"
-                                    class="form-control"
+                                    class="form-control validate"
+                          required="required"
                                   />
                                 </div>
                                 <div class="col-sm-3">
@@ -3364,7 +3389,7 @@
                                   type="checkbox"
                                   name="another_acc"
                                   id="account"
-                                />Pension or retirement savings
+                                />Funds from another account
                                 <span class="checkmark"></span>
                               </label>
                             </div>
@@ -3445,7 +3470,8 @@
                                   value=""
                                   name="bank_funding"
                                   id="bank"
-                                  class="form-control"
+                                  class="form-control validate"
+                          required="required"
                                 />
                               </div>
                             </div>
@@ -3473,7 +3499,8 @@
                                   value=""
                                   id="acc_num"
                                   name="acc_num"
-                                  class="form-control"
+                                  class="form-control validate"
+                          required="required"
                                 />
                               </div>
                             </div>
@@ -4486,7 +4513,8 @@
                             <label for="compny_name">Company Name</label>
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="compny_name"
                               value=""
                               id="compny_name"
@@ -4543,7 +4571,8 @@
                             <label for="affi_name">Same as Employer</label>
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="affi_name"
                               value=""
                               id="affi_name"
@@ -4557,7 +4586,8 @@
                             >
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="affi_entity_name"
                               value=""
                               id="affi_entity_name"
@@ -4569,7 +4599,8 @@
                             <label for="affi_adre">Address</label>
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="affi_adre"
                               value=""
                               id="affi_adre"
@@ -4584,7 +4615,8 @@
                             <label for="affi_city">City</label>
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="affi_city"
                               value=""
                               id="affi_city"
@@ -4596,7 +4628,8 @@
                             <label for="affi_state">State</label>
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control validate"
+                          required="required"
                               name="affi_state"
                               value=""
                               id="affi_state"
@@ -4647,7 +4680,7 @@
                             <label for="agrem" class="labelholder">
                               <input
                                 type="checkbox"
-                                onclick="showFileModal(this, 0)"
+                                onclick="showFileModal(this, 7)"
                                 name="agrem"
                                 id="Stocks"
                               />
@@ -4776,14 +4809,7 @@
                                 onclick="showFileModal(this, 6)"
                                 name="petren"
                                 id="petren" />
-                              Margin Disclosure
-                              <span
-                                style="
-                                  color: red;
-                                  font-size: 10px;
-                                  display: inline;
-                                "
-                              >
+                              
                                 Pattern Day Trade Disclosure
                                 <span
                                   style="
@@ -4816,7 +4842,9 @@
                                 onclick="showFileModal(this, 6)"
                                 name="confirmed_electronic"
                                 id="confirmed_electronic" />
-                              Margin Disclosure
+                                Consent for Mail delivery of Statements and
+                                Confirms otherwise they will be delivered
+                                electronically
                               <span
                                 style="
                                   color: red;
@@ -4824,11 +4852,10 @@
                                   display: inline;
                                 "
                               >
-                                Consent for Mail delivery of Statements and
-                                Confirms otherwise they will be delivered
-                                electronically
-                                <span class="checkmark"></span> </span
-                            ></label>
+                              Declined</span>
+                               
+                                <span class="checkmark"></span> </span>
+                            </label>
                           </div>
                         </div>
                       </div>

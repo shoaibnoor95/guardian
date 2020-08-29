@@ -12,6 +12,13 @@ function ensureAuthenticated(req, res, next) {
     res.redirect("/login");
   }
 }
+function conditionalRender(req, res, next) {
+  if (req.isAuthenticated()) {
+    res.render("edit");
+  } else {
+    next();
+  }
+}
 
 router.use(function (req, res, next) {
   res.locals.currentUser = req.user;
@@ -19,16 +26,18 @@ router.use(function (req, res, next) {
   res.locals.infos = req.flash("info");
   next();
 });
+
 router.post("/form", ensureAuthenticated, function (req, res, next) {
+  console.log(req.body);
   req.user.firstName = req.body.firstName;
   req.user.middleName = req.body.middleName;
   req.user.lastName = req.body.lastName;
   req.user.suitNo = req.body.suitNo;
-  req.user.address = req.body.address;
+  req.user.address = req.body.address[0];
   req.user.streetAddress = req.body.streetAddress;
   req.user.country = req.body.country;
   req.user.province = req.body.province;
-  req.user.city = req.body.city;
+  req.user.city = req.body.city[0];
   req.user.occupation = req.body.occupation;
   req.user.differentMailingAddress = req.body.differentMailingAddress;
   req.user.martial_status = req.body.martial_status;
@@ -120,13 +129,22 @@ router.post("/form", ensureAuthenticated, function (req, res, next) {
   req.user.affi_state = req.body.affi_state;
   req.user.affi_zip = req.body.affi_zip;
   req.user.agrem = req.body.agrem;
-  req.user.save();
-  req.flash("info", "User has been successfully saved");
-  res.redirect("/login");
+  req.user.save(next);
+  //req.flash("info", "User has been successfully saved");
+  res.redirect("/");
 });
-router.get("/", function (req, res, next) {
+router.get("/login", function (req, res, next) {
   res.render("login");
 });
+
+router.get("/edit", ensureAuthenticated, function (req, res) {
+  res.render("form", { user: req.user });
+});
+
+// router.post("/edit", ensureAuthenticated, function (req, res, next) {
+//   res.render("/form", { user: req.user });
+//   // });
+// });
 
 router.post(
   "/login",
@@ -136,6 +154,25 @@ router.post(
     failureFlash: true,
   })
 );
+router.get("/", conditionalRender, (req, res, next) => {
+  res.render("login");
+});
+
+router.get("/list", ensureAuthenticated, (req, res, next) => {
+  User.find({})
+    .select({ firstName: 1, email: 1 })
+    .exec(function (err, user) {
+      if (err) {
+        req.flash("info", "whoops something went wrong");
+
+        res.render("view");
+        return;
+      }
+      res.send({ user: user });
+      // res.render('view',{user:user});
+    });
+});
+
 router.get("/form", ensureAuthenticated, function (req, res) {
   res.render("form");
 });
@@ -144,7 +181,7 @@ router.get("/logout", function (req, res) {
   res.redirect("/");
 });
 
-router.get("/signup", function (req, res) {
+router.get("/register", function (req, res) {
   res.render("signup");
 });
 
@@ -163,7 +200,7 @@ router.post(
       }
       if (user) {
         req.flash("error", "User already exists");
-        return res.redirect("/signup");
+        return res.redirect("/register");
       }
 
       var newUser = new User({
@@ -178,7 +215,7 @@ router.post(
   },
   passport.authenticate("login", {
     successRedirect: "/form",
-    failureRedirect: "/signup",
+    failureRedirect: "/register",
     failureFlash: true,
   })
 );

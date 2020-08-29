@@ -11,7 +11,15 @@ var setUpPassport = require("./setuppassport");
 var routes = require("./routes");
 
 var app = express();
-mongoose.connect("mongodb://localhost:27017/test");
+mongoose.connect("mongodb://localhost:127.0.0.1/guardian2?authSource=admin", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  auth: {
+    user: "myUserAdmin",
+    password: "dawn123",
+  },
+});
 setUpPassport();
 
 app.set("port", process.env.PORT || 3000);
@@ -24,11 +32,13 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(session({
-  secret: "LUp$Dg?,I#i&owP3=9su+OB%`JgL4muLF5YJ~{;t",
-  resave: true,
-  saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: "LUp$Dg?,I#i&owP3=9su+OB%`JgL4muLF5YJ~{;t",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
 app.use(flash());
 
@@ -37,6 +47,6 @@ app.use(passport.session());
 
 app.use(routes);
 
-app.listen(app.get("port"), function() {
+app.listen(app.get("port"), function () {
   console.log("Server started on port " + app.get("port"));
 });
